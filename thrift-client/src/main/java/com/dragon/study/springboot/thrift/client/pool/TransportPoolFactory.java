@@ -1,8 +1,8 @@
 package com.dragon.study.springboot.thrift.client.pool;
 
 
-import com.dragon.study.springboot.thrift.client.route.Node;
 import com.dragon.study.springboot.thrift.client.exception.ThriftClientException;
+import com.dragon.study.springboot.thrift.client.route.Node;
 
 import org.apache.commons.lang3.exception.ExceptionUtils;
 import org.apache.commons.pool2.BaseKeyedPooledObjectFactory;
@@ -19,7 +19,7 @@ public class TransportPoolFactory extends BaseKeyedPooledObjectFactory<Node, TTr
 
   private static ConcurrentHashMap<String, Long> forbidMap = new ConcurrentHashMap<>();
 
-  private static final int FORBID_TIME = 6000;
+  private static final int FORBID_TIME = 5000;
 
   @Override
   public void destroyObject(Node key, PooledObject<TTransport> value) throws Exception {
